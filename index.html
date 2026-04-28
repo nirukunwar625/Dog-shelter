@@ -1,165 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Paws Dog Shelter</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafePaws Dog Shelter</title>
 
-    header {
-      background: #ff914d;
-      color: white;
-      padding: 15px 0;
-      text-align: center;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #333;
-    }
+<style>
 
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    nav a:hover {
-      background: #ff914d;
-    }
+body {
+  background: #f4f7fb;
+  color: #333;
+}
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') no-repeat center center/cover;
-      height: 60vh;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .hero h1 {
-      font-size: 3em;
-      background: rgba(0,0,0,0.5);
-      padding: 10px;
-    }
+/* ================= NAVBAR ================= */
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  z-index: 999;
+}
 
-    .container {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+header h2 {
+  color: #ff5a5f;
+}
 
-    .dogs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
 
-    .dog-card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-    }
+nav a:hover {
+  color: #ff5a5f;
+}
 
-    .dog-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1601758174624-3d0f54e2e1c5') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
 
-    .dog-card h3 {
-      margin: 10px 0;
-    }
+.hero h1 {
+  font-size: 3.8em;
+}
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      background: #ff914d;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+.hero p {
+  margin: 15px 0;
+}
 
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
+.btn {
+  padding: 12px 22px;
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #e04848;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 70px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff5a5f;
+}
+
+/* ================= CARDS ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+/* ================= SEARCH ================= */
+.search-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+/* ================= FAQ ================= */
+.faq {
+  margin-top: 20px;
+}
+
+.faq-item {
+  background: white;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= FORM ================= */
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Happy Paws Dog Shelter</h1>
-  <p>Giving dogs a second chance at life 🐾</p>
+  <h2>SafePaws 🐾</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#dogs">Dogs</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#dogs">Adopt</a>
-  <a href="#contact">Contact</a>
-</nav>
-
 <section class="hero">
-  <h1>Adopt a Friend Today</h1>
+  <div>
+    <h1>Adopt Love. Save Lives.</h1>
+    <p>Every dog deserves a home</p>
+    <button class="btn" onclick="openModal()">Adopt Now</button>
+  </div>
 </section>
 
-<div class="container" id="about">
+<section class="section" id="about">
   <h2>About Us</h2>
-  <p>
-    We are a loving dog shelter dedicated to rescuing abandoned and homeless dogs.
-    Our mission is to provide care, love, and find forever homes for every dog.
+  <p style="text-align:center;">
+    SafePaws is a modern dog shelter focused on rescuing, rehabilitating,
+    and rehoming dogs. We believe every dog deserves love and care.
   </p>
-</div>
+</section>
 
-<div class="container" id="dogs">
-  <h2>Dogs Available for Adoption</h2>
-  <div class="dogs">
+<section class="section" id="dogs">
+  <h2>Our Dogs</h2>
 
-    <div class="dog-card">
-      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Dog">
-      <h3>Buddy</h3>
-      <p>Friendly and playful</p>
-      <a href="#" class="btn">Adopt</a>
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search dog..." onkeyup="searchDogs()">
+  </div>
+
+  <div class="grid" id="dogGrid">
+
+    <!-- MANY DOG CARDS (duplicate to extend length) -->
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
+      <div class="card-content">
+        <h3>Buddy</h3>
+        <p>Friendly & playful</p>
+        <button class="btn">Adopt</button>
+      </div>
     </div>
 
-    <div class="dog-card">
-      <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d" alt="Dog">
-      <h3>Luna</h3>
-      <p>Calm and loving</p>
-      <a href="#" class="btn">Adopt</a>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+      <div class="card-content">
+        <h3>Luna</h3>
+        <p>Calm & loving</p>
+        <button class="btn">Adopt</button>
+      </div>
     </div>
 
-    <div class="dog-card">
-      <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2" alt="Dog">
-      <h3>Max</h3>
-      <p>Energetic and loyal</p>
-      <a href="#" class="btn">Adopt</a>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2">
+      <div class="card-content">
+        <h3>Max</h3>
+        <p>Energetic</p>
+        <button class="btn">Adopt</button>
+      </div>
     </div>
 
+    <!-- DUPLICATE MORE FOR LENGTH -->
+    
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <h2>FAQ</h2>
+
+  <div class="faq">
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      How to adopt?
+      <p style="display:none;">Fill the form and we will contact you.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      Adoption fee?
+      <p style="display:none;">Depends on age and breed.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      Do you vaccinate dogs?
+      <p style="display:none;">Yes, all dogs are vaccinated.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+
+  <form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="msg" placeholder="Message"></textarea>
+    <button class="btn">Send</button>
+  </form>
+
+</section>
+
+<footer>
+  <p>© 2026 SafePaws Shelter</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Adoption Form</h3>
+    <p>Contact us to proceed with adoption.</p>
+    <button class="btn" onclick="closeModal()">Close</button>
   </div>
 </div>
 
-<div class="container" id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: info@happypaws.com</p>
-  <p>Phone: +977-9800000000</p>
-</div>
+<script>
 
-<footer>
-  <p>&copy; 2026 Happy Paws Dog Shelter</p>
-</footer>
+/* MODAL */
+function openModal() {
+  document.getElementById('modal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+
+/* FAQ */
+function toggleFAQ(el) {
+  let p = el.querySelector('p');
+  p.style.display = p.style.display === 'block' ? 'none' : 'block';
+}
+
+/* SEARCH */
+function searchDogs() {
+  let input = document.getElementById('search').value.toLowerCase();
+  let cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    let name = card.innerText.toLowerCase();
+    card.style.display = name.includes(input) ? 'block' : 'none';
+  });
+}
+
+/* FORM */
+function validateForm() {
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+
+  if(name === "" || email === "") {
+    alert("Please fill all fields");
+    return false;
+  }
+
+  alert("Message sent!");
+  return true;
+}
+
+</script>
 
 </body>
 </html>
