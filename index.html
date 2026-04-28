@@ -3,365 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafePaws Dog Shelter</title>
+<title>Golden Haven Dog Shelter</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* ================= GLOBAL ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 body {
-  background: #f4f7fb;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: #f9fbfd;
   color: #333;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* ================= NAVBAR ================= */
 header {
-  position: sticky;
-  top: 0;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-  z-index: 999;
+  background: #2f80ed;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-header h2 {
-  color: #ff5a5f;
+nav {
+  background: #1c5db6;
+  display: flex;
+  justify-content: center;
 }
 
 nav a {
-  margin: 0 12px;
+  color: white;
+  padding: 12px 18px;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
 }
 
 nav a:hover {
-  color: #ff5a5f;
+  background: #2f80ed;
 }
 
-/* ================= HERO ================= */
 .hero {
-  height: 100vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-  url('https://images.unsplash.com/photo-1601758174624-3d0f54e2e1c5') center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 80px 20px;
   text-align: center;
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
   color: white;
 }
 
-.hero h1 {
-  font-size: 3.8em;
-}
-
-.hero p {
-  margin: 15px 0;
-}
-
-.btn {
-  padding: 12px 22px;
-  background: #ff5a5f;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: #e04848;
-}
-
-/* ================= SECTIONS ================= */
 .section {
-  padding: 70px 40px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
+  padding: 50px 20px;
 }
 
 .section h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #ff5a5f;
+  margin-bottom: 30px;
 }
 
-/* ================= CARDS ================= */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 25px;
-}
-
-.card {
+.breed {
   background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: 0.3s;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card img {
+.breed img {
   width: 100%;
-  height: 220px;
+  max-height: 300px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
-.card-content {
-  padding: 15px;
-  text-align: center;
-}
-
-/* ================= SEARCH ================= */
-.search-box {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.search-box input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-}
-
-/* ================= FAQ ================= */
-.faq {
-  margin-top: 20px;
-}
-
-.faq-item {
-  background: white;
-  margin-bottom: 10px;
-  padding: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* ================= FORM ================= */
-form {
-  max-width: 500px;
-  margin: auto;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* ================= FOOTER ================= */
 footer {
-  background: #222;
+  background: #1c1c1c;
   color: white;
   text-align: center;
   padding: 20px;
 }
-
-/* ================= MODAL ================= */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-  <h2>SafePaws 🐾</h2>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#dogs">Dogs</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <h1>Golden Haven Dog Shelter 🐾</h1>
+  <p>Where Every Breed Finds Love</p>
 </header>
 
+<nav>
+  <a href="#about">About</a>
+  <a href="#breeds">Breeds</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <section class="hero">
-  <div>
-    <h1>Adopt Love. Save Lives.</h1>
-    <p>Every dog deserves a home</p>
-    <button class="btn" onclick="openModal()">Adopt Now</button>
-  </div>
+  <h2>Discover Different Dog Breeds</h2>
+  <p>Learn about their personalities and find your perfect companion.</p>
 </section>
 
 <section class="section" id="about">
-  <h2>About Us</h2>
-  <p style="text-align:center;">
-    SafePaws is a modern dog shelter focused on rescuing, rehabilitating,
-    and rehoming dogs. We believe every dog deserves love and care.
+  <h2>About Our Shelter</h2>
+  <p>
+    Golden Haven Dog Shelter is dedicated to rescuing, protecting, and rehoming dogs of all breeds.
+    We believe that understanding a dog’s breed, personality, and needs is essential for creating
+    a strong and lasting bond between pets and their owners. Our shelter provides a safe environment
+    where dogs receive medical care, proper nutrition, and social interaction until they are ready
+    to find their forever homes.
   </p>
 </section>
 
-<section class="section" id="dogs">
-  <h2>Our Dogs</h2>
+<section class="section" id="breeds">
+  <h2>Popular Dog Breeds in Our Shelter</h2>
 
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Search dog..." onkeyup="searchDogs()">
+  <div class="breed">
+    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
+    <h3>Labrador Retriever</h3>
+    <p>
+      Labrador Retrievers are one of the most popular dog breeds in the world, known for their
+      friendly and outgoing nature. They are highly intelligent, making them easy to train,
+      and they excel in activities such as obedience, agility, and even service work.
+      Labradors are incredibly loyal and form strong bonds with their families.
+    </p>
+    <p>
+      These dogs are energetic and require regular exercise, including walks, playtime,
+      and mental stimulation. They are especially good with children and other pets,
+      making them an excellent choice for families. However, they do need space to move
+      around and can become bored if left alone for long periods.
+    </p>
   </div>
 
-  <div class="grid" id="dogGrid">
-
-    <!-- MANY DOG CARDS (duplicate to extend length) -->
-    
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
-      <div class="card-content">
-        <h3>Buddy</h3>
-        <p>Friendly & playful</p>
-        <button class="btn">Adopt</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
-      <div class="card-content">
-        <h3>Luna</h3>
-        <p>Calm & loving</p>
-        <button class="btn">Adopt</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2">
-      <div class="card-content">
-        <h3>Max</h3>
-        <p>Energetic</p>
-        <button class="btn">Adopt</button>
-      </div>
-    </div>
-
-    <!-- DUPLICATE MORE FOR LENGTH -->
-    
+  <div class="breed">
+    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+    <h3>German Shepherd</h3>
+    <p>
+      German Shepherds are known for their intelligence, strength, and versatility.
+      They are commonly used as working dogs in police and military roles due to their
+      courage and trainability. These dogs are extremely loyal and protective, often
+      forming deep connections with their owners.
+    </p>
+    <p>
+      This breed requires consistent training and socialization from an early age.
+      German Shepherds thrive in active households where they can engage in physical
+      and mental challenges. While they are excellent guardians, they are also loving
+      companions when properly trained and cared for.
+    </p>
   </div>
-</section>
 
-<section class="section" id="faq">
-  <h2>FAQ</h2>
+  <div class="breed">
+    <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2">
+    <h3>Golden Retriever</h3>
+    <p>
+      Golden Retrievers are gentle, affectionate, and incredibly patient dogs.
+      They are well-known for their friendly demeanor and are often used as therapy
+      and assistance dogs. Their intelligence and eagerness to please make them
+      highly trainable.
+    </p>
+    <p>
+      This breed loves outdoor activities such as fetching, swimming, and running.
+      Golden Retrievers are ideal for families, as they are tolerant and kind with
+      children. Regular grooming is necessary due to their thick coat, and they
+      require daily exercise to stay healthy and happy.
+    </p>
+  </div>
 
-  <div class="faq">
-    <div class="faq-item" onclick="toggleFAQ(this)">
-      How to adopt?
-      <p style="display:none;">Fill the form and we will contact you.</p>
-    </div>
+  <div class="breed">
+    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e">
+    <h3>Beagle</h3>
+    <p>
+      Beagles are small to medium-sized dogs known for their curious and cheerful nature.
+      They have a strong sense of smell and were originally bred for hunting. Beagles
+      are social animals and enjoy being part of a family environment.
+    </p>
+    <p>
+      Due to their energetic personality, they need regular exercise and mental
+      stimulation. Beagles can sometimes be stubborn, so training requires patience
+      and consistency. Their affectionate nature makes them wonderful companions.
+    </p>
+  </div>
 
-    <div class="faq-item" onclick="toggleFAQ(this)">
-      Adoption fee?
-      <p style="display:none;">Depends on age and breed.</p>
-    </div>
-
-    <div class="faq-item" onclick="toggleFAQ(this)">
-      Do you vaccinate dogs?
-      <p style="display:none;">Yes, all dogs are vaccinated.</p>
-    </div>
+  <div class="breed">
+    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1">
+    <h3>Siberian Husky</h3>
+    <p>
+      Siberian Huskies are known for their striking appearance and high energy levels.
+      They are friendly, outgoing, and enjoy being part of a pack. Huskies are
+      independent thinkers, which can sometimes make training a challenge.
+    </p>
+    <p>
+      This breed requires plenty of exercise and thrives in cooler climates.
+      Huskies are not typically aggressive but can be mischievous if bored.
+      They are best suited for active owners who can meet their physical needs.
+    </p>
   </div>
 
 </section>
 
 <section class="section" id="contact">
   <h2>Contact Us</h2>
-
-  <form onsubmit="return validateForm()">
-    <input type="text" id="name" placeholder="Your Name">
-    <input type="email" id="email" placeholder="Email">
-    <textarea id="msg" placeholder="Message"></textarea>
-    <button class="btn">Send</button>
-  </form>
-
+  <p>Email: info@goldenhaven.com</p>
+  <p>Phone: +977-98XXXXXXX</p>
 </section>
 
 <footer>
-  <p>© 2026 SafePaws Shelter</p>
+  <p>© 2026 Golden Haven Dog Shelter</p>
 </footer>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h3>Adoption Form</h3>
-    <p>Contact us to proceed with adoption.</p>
-    <button class="btn" onclick="closeModal()">Close</button>
-  </div>
-</div>
-
-<script>
-
-/* MODAL */
-function openModal() {
-  document.getElementById('modal').style.display = 'flex';
-}
-
-function closeModal() {
-  document.getElementById('modal').style.display = 'none';
-}
-
-/* FAQ */
-function toggleFAQ(el) {
-  let p = el.querySelector('p');
-  p.style.display = p.style.display === 'block' ? 'none' : 'block';
-}
-
-/* SEARCH */
-function searchDogs() {
-  let input = document.getElementById('search').value.toLowerCase();
-  let cards = document.querySelectorAll('.card');
-
-  cards.forEach(card => {
-    let name = card.innerText.toLowerCase();
-    card.style.display = name.includes(input) ? 'block' : 'none';
-  });
-}
-
-/* FORM */
-function validateForm() {
-  let name = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
-
-  if(name === "" || email === "") {
-    alert("Please fill all fields");
-    return false;
-  }
-
-  alert("Message sent!");
-  return true;
-}
-
-</script>
 
 </body>
 </html>
