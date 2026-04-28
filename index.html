@@ -1,1 +1,165 @@
-<h1>dog shelter</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Paws Dog Shelter</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ff914d;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #ff914d;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') no-repeat center center/cover;
+      height: 60vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .dogs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .dog-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .dog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .dog-card h3 {
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: #ff914d;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Happy Paws Dog Shelter</h1>
+  <p>Giving dogs a second chance at life 🐾</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#dogs">Adopt</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <h1>Adopt a Friend Today</h1>
+</section>
+
+<div class="container" id="about">
+  <h2>About Us</h2>
+  <p>
+    We are a loving dog shelter dedicated to rescuing abandoned and homeless dogs.
+    Our mission is to provide care, love, and find forever homes for every dog.
+  </p>
+</div>
+
+<div class="container" id="dogs">
+  <h2>Dogs Available for Adoption</h2>
+  <div class="dogs">
+
+    <div class="dog-card">
+      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Dog">
+      <h3>Buddy</h3>
+      <p>Friendly and playful</p>
+      <a href="#" class="btn">Adopt</a>
+    </div>
+
+    <div class="dog-card">
+      <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d" alt="Dog">
+      <h3>Luna</h3>
+      <p>Calm and loving</p>
+      <a href="#" class="btn">Adopt</a>
+    </div>
+
+    <div class="dog-card">
+      <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2" alt="Dog">
+      <h3>Max</h3>
+      <p>Energetic and loyal</p>
+      <a href="#" class="btn">Adopt</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="container" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@happypaws.com</p>
+  <p>Phone: +977-9800000000</p>
+</div>
+
+<footer>
+  <p>&copy; 2026 Happy Paws Dog Shelter</p>
+</footer>
+
+</body>
+</html>
